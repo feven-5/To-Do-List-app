@@ -3,22 +3,38 @@
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>To Do List Application</title>
       <link rel="stylesheet" href="src/css.css">
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+      <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+      <title>To Do List Application</title>
     </head>
-    <body class="text-center">
-      <header>
-        <h1>To Do List 📝</h1>
-      </header>
-      <section>
-        <input type="search" placeholder="Add list">
-        <input type="submit" value="Add">
-      </section>
-      <section>
-        =>lists
-      </section>
+    <body class="bg-gray-200 font-sans">
+      <div class="rounded-xl text-center bg-gray-100 w-3/4 display-block m-auto mt-20 p-5 shadow-lg">
+        <header>
+          <h1 class="font-extrabold text-4xl">To Do List 📝</h1>
+        </header>
+        <section>
+          <div class="my-3">
+            <form>
+              <input class="inputList w-2/3 rounded-full p-3 border border-solid-blue-200 bg-blue-100 hover:border-indigo-50" type="text" placeholder="Add list ...">
+              <input class="submit rounded-full p-3 border border-solid-blue-50 bg-blue-100 cursor-pointer" type="submit" value="Add a list">
+            </form>
+          </div>
+        </section>
+        <section class="mx-20">
+          <div>
+            <h3>Your lists</h3>
+          </div>
+          <div>
+            <ul class="ul text-left leading-relaxed">
+            </ul>
+          </div>
+        </section>
+        <footer>
+          coded by feven
+        </footer>
+      </div>
+      
       <script src="src/js.js"></script>
     </body>
   </html>
