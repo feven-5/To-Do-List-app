@@ -1,7 +1,3 @@
-let elements = document.querySelector(".inputList");
-let ul = document.querySelector(".ul");
-let li = document.createElement('li');
-
 document.querySelector('Form').addEventListener('submit', addlist);
 function addlist(event){
   
@@ -26,14 +22,16 @@ function addlist(event){
   
   let button = document.createElement('button');
   button.type = 'button';
-  button.textContent = 'x';
+  button.textContent = 'Delete';
   button.style.float = "right";
   button.style.border = 'none';
   button.style.borderRadius ="4px"
   button.style.width = "25px"
   button.style.color = 'black';
   button.style.backgroundColor = 'rgb(219 234 254)';
-  button.style.lineHeight = "24px"
+  button.style.lineHeight = "24px";
+  button.style.paddingLeft = "5px";
+  button.style.paddingRight = "50px";
   button.addEventListener("click", function(){
     ul.removeChild(li);
   });
@@ -51,4 +49,3 @@ function addlist(event){
   ul.appendChild(li);
   elements.value="";
 }
-
